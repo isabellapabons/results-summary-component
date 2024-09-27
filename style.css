@@ -1,0 +1,220 @@
+body {
+    font-family: 'Hanken Grotesk';
+    margin: 0;
+}
+
+/* Purple Container */
+
+.purple-container {
+    background-color: hsl(249, 95%, 61%);
+    border-radius: 0px 0px 20px 20px;
+}
+
+.your-result-heading {
+    color: hsl(257, 100%, 86%);
+    font-size: 1.4rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.score-header-circle {
+    background-color: hsl(248, 76%, 53%);
+    border-radius: 50%;
+    margin: 0 auto;
+    padding: 1.5rem;
+    text-align: center;
+    width: 70px;
+}
+
+.score-header-result {
+    color: hsl(0, 0%, 100%);
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.score-header-range {
+    color: hsl(243, 93%, 74%);
+    display: block;
+    font-weight: 600;
+}
+
+.great-subheading {
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+}
+
+.paragraph {
+    color: hsl(241, 100%, 85%);
+    font-size: 18px;
+    margin: 0 auto;
+    max-width: 60%;
+    text-align: center;
+   padding-bottom: 2rem;
+}
+
+/* White Container */
+
+.white-container {
+    padding: 1rem;
+}
+
+.icon-text {
+    display: inline;
+}
+
+.results {
+    margin-left: 62%;
+}
+
+.summary-heading {
+    color: hsl(224, 30%, 27%);
+    margin: 1rem;
+}
+
+.icon-reaction-container {
+    background-color: hsl(0, 100%, 98%);
+}
+
+.icon-memory-container {
+    background-color: hsl(42, 100%, 97%);
+}
+
+.icon-verbal-container {
+    background-color: hsl(168, 100%, 95%);
+}
+
+.icon-visual-container {
+    background-color: hsl(235, 92%, 95%);
+}
+
+/* Icon containers: borders */
+
+.icon-container {
+    border-radius: 10px;
+    margin: 1rem;
+    overflow: hidden;
+    padding: 1rem;
+    position: relative;
+}
+
+.icon-container::before {
+    border-radius: 13px; 
+    bottom: 0;
+    content: ""; 
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.icon-reaction-container::before { box-shadow: 0 0 0 1px hsl(348, 100%, 78%); }
+.icon-memory-container::before { box-shadow: 0 0 0 1px hsl(39, 100%, 70%); } 
+.icon-verbal-container::before { box-shadow: 0 0 0 1px hsl(163, 72%, 71%); } 
+.icon-visual-container::before { box-shadow: 0 0 0 1px hsl(207, 90%, 76%); } 
+
+.reaction-subheading {
+    color: hsl(0, 100%, 67%);
+    font-weight: 600;
+}
+
+.memory-subheading {
+    color: hsl(39, 100%, 56%);
+    font-weight: 600;
+}
+
+.verbal-subheading {
+    color: hsl(166, 100%, 37%);
+    font-weight: 600;
+}
+
+.visual-subheading {
+    color: hsl(234, 85%, 45%);
+    font-weight: 600;
+}
+
+.score {
+    color: hsl(236, 10%, 29%);
+    font-weight: 800;
+}
+
+.score-range {
+    color: hsl(300, 3%, 64%);
+    font-weight: 700;
+}
+
+.continue-button {
+    background-color: hsl(224, 30%, 27%);
+    border-radius: 50px;
+    color: hsl(0, 0%, 100%);
+    display: block;
+    font-weight: 500;
+    padding: 1rem;
+    text-decoration: none;
+    width: 80%;
+}
+
+.button {
+    display: block;
+    margin: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.continue-button:hover {
+    background-color: hsl(224, 50%, 27%);
+}
+
+/* Desktop: 1400px and wider */
+
+@media screen and (min-width: 1400px) {
+    .main {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 8rem;
+        position: relative;
+    }
+
+    .purple-container {
+        border-radius: 30px;
+        margin-right: -23px; /* Used to overlap */
+        max-width: 29%;
+        z-index: 2; /* Higher z-index to ensure it's above the white container */
+    }    
+
+    .score-header-circle  {
+        height: 20%;
+        width: 30%;
+    }
+
+    .score-header-result {
+        font-size: 4.4rem;
+    }
+
+    .great-subheading {
+        font-size: 30px;
+        margin-bottom: -2rem;
+    }
+
+    .paragraph {
+        font-size: 16px;
+        margin-top: 6rem;
+        max-width: 60%;
+    }
+
+    .white-container {
+        border-radius: 0px 10px 10px 0px;
+        box-shadow: 0 4px 8px 0 #eaf0fb;
+        padding: 3rem;
+        width: 25%;
+        z-index: 1; /* Lower z-index to ensure it's below the purple container */
+    }
+
+    .summary-heading {
+        font-size: 1.3rem;
+    }
+
+    .results {
+        margin-left: 30%;
+    }
+}
